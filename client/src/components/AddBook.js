@@ -4,7 +4,7 @@ import { useQuery, useMutation } from '@apollo/client';
 
 export default function AddBook() {
     const { loading, error, data } = useQuery(getAuthorsQuery);
-    const [addBook, { loading: addBookLoading, error: addBookError, data: addBookData }] = useMutation(addBookMutation);
+    const [addBook] = useMutation(addBookMutation);
 
     const [bookName, setBookName] = React.useState("");
     const [bookGenre, setBookGenre] = React.useState("");
